@@ -26,11 +26,16 @@ SECRET_KEY = 'django-insecure-0_c_d3f1ja5siw^xr(*3y7#n51*7d5fg3)_hs_p^1s&6(yk0#c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','akhilaa.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost','akhilaa.pythonanywhere.com','*']
 
 
 # Application definition
 
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
+}
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -125,3 +130,4 @@ STATIC_ROOT=os.path.join(BASE_DIR,'static')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
