@@ -9,7 +9,7 @@ from django.utils import timezone
 
 
 @api_view(['GET','POST'])
-def buisnessUnits(request):
+def businessUnits(request):
     if request.method=='GET':
         all_companies=Company.objects.all()
         serializer=CompanySerializer(all_companies,many=True)     #serializing
@@ -26,7 +26,7 @@ def buisnessUnits(request):
 
 @api_view(['PUT','GET','DELETE'])
 
-def buisnessUnit(request,id):
+def businessUnit(request,id):
     if request.method=='GET':
 
         try:

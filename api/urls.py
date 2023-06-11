@@ -1,9 +1,9 @@
 
 from django.urls import path
-from .views import buisnessUnits,buisnessUnit,emps,emp,BuEmps,BuEmp,EmpLogin,EmpLogout
+from .views import businessUnits,businessUnit,emps,emp,BuEmps,BuEmp,EmpLogin,EmpLogout
 urlpatterns = [
-  path('buisnessUnits/',buisnessUnits),
-  path('buisnessUnit/<id>/',buisnessUnit),
+  path('businessUnits/',businessUnits),
+  path('businessUnit/<id>/',businessUnit),
   path('employees/',emps),
   path('employee/<id>/',emp),
   path('businessUnit/<id>/employee/',BuEmps),
